@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
@@ -14,13 +16,15 @@ import { MessagesComponent } from './components/messages/messages.component';
     AppComponent,
     HeroesComponent,
     HeroDetailsComponent,
-    MessagesComponent
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatButtonModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
