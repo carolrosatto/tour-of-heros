@@ -1,0 +1,14 @@
+<h1>Dashboard</h1>
+<div
+  fxLayout
+  fxLayoutGap="1rem"
+  fxLayoutAlign="space-between"
+  fxLayout.xs="column"
+>
+  <mat-card class="pointer" *ngFor="let hero of heroes" routerLink="/heroes/{{ hero.id }}">
+    <mat-card-header>
+      <mat-card-title>{{ hero.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content></mat-card-content>
+  </mat-card>
+</div>
