@@ -1,9 +1,26 @@
 <div *ngIf="hero">
   <h1>{{ hero.name | uppercase }} Details</h1>
-  <div><span>id: </span>{{ hero.id }}</div>
-  <div><span>name: </span>{{ hero.name }}</div>
-  <div>
-    <label for="name">Hero name:</label>
-    <input type="text" id="name" placeholder="name" [(ngModel)]="hero.name" />
-  </div>
+  <mat-card>
+    <mat-card-content fxLayout="column">
+      <mat-form-field>
+        <mat-label>ID</mat-label>
+        <input matInput disabled [value]="hero.id" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Hero name</mat-label>
+        <input
+          matInput
+          type="text"
+          id="name"
+          placeholder="Name"
+          [(ngModel)]="hero.name"
+        />
+      </mat-form-field>
+      <mat-card-actions>
+        <button color="primary" mat-raised-button (click)="goBack()">
+          Back
+        </button>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
 </div>
